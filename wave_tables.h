@@ -1,4 +1,4 @@
-float* normalize_table(float* table, int length)
+void normalize_table(float* table, int length)
 {
 	int i;
 	int max = 0;
@@ -8,7 +8,6 @@ float* normalize_table(float* table, int length)
 	for (i = 0; i < length; i++) {
 		table[i] /= max;
 	}
-	return table;
 }
 
 void fourier_table(float* table, int harmonics, int length, float* amps, float offset)
@@ -41,7 +40,7 @@ void populate_square_table(float* table, int harmonics, int length)
 	float amps[length];
 	float offset = -(M_PI / 2);
 	for (k = 0; k < length; k++) {
-		if (k % 2 == 0) {
+		if ((k + 1) % 2 == 0) {
 			amps[k] = 0;
 		}
 		else {

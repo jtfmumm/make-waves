@@ -47,7 +47,7 @@ int main(int argc, char ** argv)
 
 	//(int)(osc(&control, sin_table, 440, 4000, &index2, 200, sfout))
 
-	for (i = 0; i < 1024; i++) printf("%f--", square_table[i]);
+	//for (i = 0; i < 1024; i++) printf("%f--", square_table[i]);
 	sfclose(sfout);
 	free(sfout->buffer);
 	free(sfout->header);
