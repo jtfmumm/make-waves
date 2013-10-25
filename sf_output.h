@@ -1,6 +1,11 @@
 #include "wave_header.h"
 
-//
+/*
+	Sound file interface:
+	init_sfile(SFILE, file_name, sample_rate, channels, bits_per_sample, vector_size)
+	sfwrite(SFILE)
+	sfclose(SFILE) - Update header to reflect data section size and close
+*/
 
 typedef struct sound_file {
 	char* name; //Name of file
