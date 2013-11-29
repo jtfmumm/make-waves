@@ -31,7 +31,7 @@ int main(int argc, char ** argv)
 	short* control = malloc(sizeof(short) * 256); //A control buffer
 
 	//init_sfile(SFILE, name, sample rate, channels, bits-per-sample, vector size, wavetable length)
-	init_sfile(sfout, "test2.wav", SR, 1, 16, 256, 1024);
+	init_sfile(sfout, "test.wav", SR, 1, 16, 256, 1024);
 
 	dur = 10000;
 	freq = 440;
